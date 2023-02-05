@@ -1,6 +1,20 @@
 body{
-    background-color: aqua;
+    font-size: 2rem;
+    background-color: aquamarine;
 }
-ul{
-    background-color: aliceblue;
+.quiz-container{
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+}
+.quiz{
+    padding: 0.5rem;
+    margin: 0.5rem;
+}
+
+.question{
+    background-color: rgb(129, 173, 211);
+}
+.answer{
+    background-color: rgb(129, 173, 211);
 }

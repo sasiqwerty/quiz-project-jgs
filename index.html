@@ -8,16 +8,23 @@
     <title>JGS Quiz</title>
   </head>
   <body>
-    <div class="quiz" id="main-container"></div>
-    <!-- The main container to hold the quiz question and their answers -->
-    <ul>
-      <!-- The questions and their answers are displayed here injected from a json file -->
-      <li class="quiz" class="question" id="quiz-question-1"></li>
-      <li class="quiz" class="answer" id="quiz-answer-1"></li>
-      <li class="quiz" class="answer" id="quiz-answer-2"></li>
-      <li class="quiz" class="answer" id="quiz-answer-3"></li>
-      <li class="quiz" class="answer" id="quiz-answer-4"></li>
-    </ul>
+    <h1 class="headings" id="heading1">Quiz</h1>
+    <!-- The  -->
+    <div>
+      <div id="main-container"></div>
+      <!-- The main container to hold the quiz question and their answers -->
+      <p class="quiz question" id="quiz-question-1"></p>
+      <ul class="quiz-container">
+        <!-- The questions and their answers are displayed here injected from a json file -->
+        <li class="quiz answer" id="quiz-answer-1"></li>
+        <li class="quiz answer" id="quiz-answer-2"></li>
+        <li class="quiz answer" id="quiz-answer-3"></li>
+        <li class="quiz answer" id="quiz-answer-4"></li>
+      </ul>
+    </div>
+    <div class="output">
+      <p>You got <span id="score-output"></span> right</p>
+    </div>
     <script src="js/main.js"></script>
   </body>
 </html>
