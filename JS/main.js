@@ -9,11 +9,25 @@ let option4 = document.getElementById("quiz-answer-4");
 let score = document.getElementById("score-output");
 
 //output
-question.innerText = "question";
-option1.innerText = "answer1";
-option2.innerText = "answer2";
-option3.innerText = "answer3";
-option4.innerText = "answer4";
-score.innerText = "10";
 
-// Find a way to link a json file and let it iterate over the questions and answers
+// the questions list is an array containing questions as objects
+// the option is a list of answers
+// correct is the right option, when selected you will be awarded a point
+let questionsList = [
+  {
+    question: "insert the first question here",
+    option: [
+      "option1 from list",
+      "option2 from list",
+      "option3 from list",
+      "option4 from list",
+    ],
+    correct: "option[0]",
+  },
+];
+question.innerText = questionsList[0].question;
+option1.innerText = questionsList[0].option[0];
+option2.innerText = questionsList[0].option[1];
+option3.innerText = questionsList[0].option[2];
+option4.innerText = questionsList[0].option[3];
+score.innerText = "10";
