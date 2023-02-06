@@ -15,14 +15,42 @@ let score = document.getElementById("score-output");
 // correct is the right option, when selected you will be awarded a point
 let questionsList = [
   {
-    question: "insert the first question here",
+    question: "What is 1+1",
     option: [
-      "option1 from list",
-      "option2 from list",
-      "option3 from list",
-      "option4 from list",
+      "The answer is 1",
+      "The answer is 2",
+      "The answer is 3",
+      "The answer is 4",
     ],
-    correct: "option[0]",
+  },
+  {
+    question: "What is 2+2",
+    option: [
+      "The answer is 6",
+      "The answer is 4",
+      "The answer is 8",
+      "The answer is 12",
+    ],
+  },
+  {
+    question: "What is 1+1",
+    option: [
+      "The answer is 1",
+      "The answer is 2",
+      "The answer is 3",
+      "The answer is 4",
+    ],
+  },
+];
+let answersList = [
+  {
+    correct: questionsList[0].option[1],
+  },
+  {
+    correct: questionsList[1].option[1],
+  },
+  {
+    correct: questionsList[2].option[1],
   },
 ];
 question.innerText = questionsList[0].question;
@@ -31,3 +59,16 @@ option2.innerText = questionsList[0].option[1];
 option3.innerText = questionsList[0].option[2];
 option4.innerText = questionsList[0].option[3];
 score.innerText = "10";
+
+function test() {
+  choose = document.getElementById("quiz-answer-1").innerText;
+  ch = document.getElementById("quiz-answer-1");
+  console.log(answersList[0].correct);
+  if (toString(choose) == toString(answersList[0].correct)) {
+    console.log("works");
+    ch.style.backgroundColor = "green";
+  } else {
+    console.log("fail");
+    ch.style.backgroundColor = "red";
+  }
+}
